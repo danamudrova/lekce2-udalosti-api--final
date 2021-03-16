@@ -18,7 +18,11 @@
 	<button onclick="prepniZcervenani('js-paragraph')">červené po kliknutí</button>
 	<button onclick="zvetsitPismo('#js-paragraph', 1);">větší po kliknutí</button>
 	
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<h2>Audio ovladač</h2>
+	<button onclick="prehraj('#js-audio')">Prehraj</button>
+	<button onclick="pauzni('#js-audio')">Pauzni</button>
+	
+	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
 	
 	<script src="main.js"></script>
 </body>

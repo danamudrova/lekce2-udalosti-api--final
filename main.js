@@ -20,3 +20,14 @@ function zvetsitPismo(elementSelector, fontSizeChange) {
     let currentFontSize = parseInt(element.style.fontSize);
     element.style.fontSize = (currentFontSize + fontSizeChange) + 'px';
 }
+
+/*--------------*/
+/* AUDIO FUNKCE */
+/*--------------*/
+
+function prehraj(elementSelector) {
+    document.querySelector(elementSelector).play();
+}
+function pauzni(elementSelector) {
+    document.querySelector(elementSelector).pause();
+}
