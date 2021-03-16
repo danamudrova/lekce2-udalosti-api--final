@@ -31,3 +31,9 @@ function prehraj(elementSelector) {
 function pauzni(elementSelector) {
     document.querySelector(elementSelector).pause();
 }
+function upravHlasitost(elementSelector, volumeValue) {
+    document.querySelector(elementSelector).volume = volumeValue;
+}
+function resetuj(elementSelector) {
+    document.querySelector(elementSelector).currentTime = 0;
+}

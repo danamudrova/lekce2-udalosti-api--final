@@ -21,6 +21,10 @@
 	<h2>Audio ovladač</h2>
 	<button onclick="prehraj('#js-audio')">Prehraj</button>
 	<button onclick="pauzni('#js-audio')">Pauzni</button>
+	<button onclick="upravHlasitost('#js-audio', 0)">Ztišit</button>
+	<button onclick="upravHlasitost('#js-audio', 0.5)">Hlasitost tak akorát</button>
+	<button onclick="upravHlasitost('#js-audio', 1)">Hlasitost na maximum</button>
+	<button onclick="resetuj('#js-audio')">Nastav na začátek</button>
 	
 	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
 	
