@@ -19,12 +19,12 @@
 	<button onclick="zvetsitPismo('#js-paragraph', 1);">větší po kliknutí</button>
 	
 	<h2>Audio ovladač</h2>
-	<button onclick="prehraj('#js-audio')">Prehraj</button>
-	<button onclick="pauzni('#js-audio')">Pauzni</button>
-	<button onclick="upravHlasitost('#js-audio', 0)">Ztišit</button>
-	<button onclick="upravHlasitost('#js-audio', 0.5)">Hlasitost tak akorát</button>
-	<button onclick="upravHlasitost('#js-audio', 1)">Hlasitost na maximum</button>
-	<button onclick="resetuj('#js-audio')">Nastav na začátek</button>
+	<button id="play">Prehraj</button>
+	<button id="pause">Pauzni</button>
+	<button class="js-volume" data-volume="0">Ztišit</button>
+	<button class="js-volume" data-volume="0.5">Hlasitost tak akorát</button>
+	<button class="js-volume" data-volume="1">Hlasitost na maximum</button>
+	<button id="reset">Nastav na začátek</button>
 	
 	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
 	

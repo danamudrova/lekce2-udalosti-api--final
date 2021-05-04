@@ -25,15 +25,21 @@ function zvetsitPismo(elementSelector, fontSizeChange) {
 /* AUDIO FUNKCE */
 /*--------------*/
 
-function prehraj(elementSelector) {
-    document.querySelector(elementSelector).play();
-}
-function pauzni(elementSelector) {
-    document.querySelector(elementSelector).pause();
-}
-function upravHlasitost(elementSelector, volumeValue) {
-    document.querySelector(elementSelector).volume = volumeValue;
-}
-function resetuj(elementSelector) {
-    document.querySelector(elementSelector).currentTime = 0;
-}
+document.querySelector('#play').addEventListener('click', () => {
+    document.querySelector('#js-audio').play();
+});
+
+document.querySelector('#pause').addEventListener('click', () => {
+    document.querySelector('#js-audio').pause();
+});
+
+document.querySelector('#reset').addEventListener('click', () => {
+    document.querySelector('#js-audio').currentTime = 0;
+});
+
+document.querySelectorAll('.js-volume').forEach( element => {
+    element.addEventListener('click', () => {
+        document.querySelector('#js-audio').volume = parseFloat(element.dataset.volume);
+    });
+});
+
