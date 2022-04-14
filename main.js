@@ -1,13 +1,23 @@
 // tady je místo pro náš program
 
+//přejetí myší po textu
+document.querySelector('#js-paragraph').addEventListener('mouseover',() => {
+    document.querySelector('#js-paragraph').style.fontWeight = 'bold'});
+document.querySelector('#js-paragraph').addEventListener('mouseout',() => {
+    document.querySelector('#js-paragraph').style.fontWeight = 'normal'})
+
+
+
 /**
  * Funkce přidá nebo odebere na prvku třídu, která se stará o červenou barvu písma
  * 
  * @param {string} elementId 
  */
-function prepniZcervenani(elementId) {
-    document.getElementById(elementId).classList.toggle('cerveny-text');
-}
+
+document.querySelector('#prepniZcervenani').addEventListener('click', () => {
+    document.querySelector('#js-paragraph').classList.toggle('cerveny-text');
+});
+    
 
 /**
  * Funkce zvětší/změnší písmo v elementu o definovanou velikost
@@ -15,11 +25,13 @@ function prepniZcervenani(elementId) {
  * @param {string} elementSelector 
  * @param {int} fontSizeChange 
  */
-function zvetsitPismo(elementSelector, fontSizeChange) {
-    let element = document.querySelector(elementSelector);
-    let currentFontSize = parseInt(element.style.fontSize);
-    element.style.fontSize = (currentFontSize + fontSizeChange) + 'px';
-}
+
+document.querySelector('#zvetsitPismo').addEventListener('click', () => {
+    let element = document.querySelector('#js-paragraph');
+    let currentFontSize = parseInt(element.style.fontSize); 
+    element.style.fontSize = (currentFontSize + 1) + 'px';
+})
+
 
 /*--------------*/
 /* AUDIO FUNKCE */
